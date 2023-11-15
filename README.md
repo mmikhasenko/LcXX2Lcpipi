@@ -1,4 +1,7 @@
-# Spin-Averaged Distribution for $\Lambda_c^{**+} \to \Lambda_c^+ \pi^+ \pi^-$ Decays
+# Spin-Averaged Distribution for charm Lambda baryon decays
+
+> [!IMPORTANT]
+> $\Lambda_c^{**+} \to \Lambda_c^+ \pi^+ \pi^-$
 
 This repository contains a Julia notebook for computing spin-averaged angular functions for three-body decays of excited $\Lambda_c^{**+}$ states, exploring various quantum number hypotheses.
 

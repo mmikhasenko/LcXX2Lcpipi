@@ -95,6 +95,7 @@ The symmetry of the LS coupling under permultation is the simplest,
 
 $H^{\Sigma_c\to \Lambda_c \pi}_{L-\text{wave}} = (-1)^L H^{\Sigma_c\to \pi \Lambda_c}_{L-\text{wave}}$
 
+The symmetry factor is derived in e.g [Martin-Spearman book](https://inspirehep.net/literature/2104945) in Eq.(5.30) as $(-1)^{L+S-j_1-j_2}$.
 The relation gives the way to relate the lineshape functions of $\Sigma_c^{0}$ and $\Sigma_c^{++}$:
 
 $R^{\Sigma_c^{0}} = -R^{\Sigma_c^{++}}\,.$
@@ -285,9 +286,6 @@ md"""
 ## Save to file
 """
 
-# ╔═╡ e0640daa-fa00-421c-99ec-be93347cb751
-
-
 # ╔═╡ 19cee35a-e13c-4d9f-a658-b2436b2bea89
 function wrap2dict(TV)
 	T,V = TV
@@ -304,14 +302,14 @@ function wrap2dict(TV)
 			"latex" => latexalign(T),
 			"sympy" => d_sympy,
 			"ccode" => d_cc))
-end
+end;
 
 # ╔═╡ b7103bf9-f46d-4ded-b44b-3c220064324f
 function writejson(path, obj)
     open(path, "w") do io
         JSON.print(io, obj, 4)
     end
-end
+end;
 
 # ╔═╡ ce51ae16-da09-4c38-a0d6-902c28725687
 md"""
@@ -399,7 +397,7 @@ printalign(T5h⁺[1])
 computation_result = Dict("1/2-"=>wrap2dict(T1h⁻),
 	 "3/2-"=>wrap2dict(T3h⁻),
 	 "3/2+"=>wrap2dict(T3h⁺),
-	 "5/2+"=>wrap2dict(T5h⁺));
+	 "5/2+"=>wrap2dict(T5h⁺))
 
 # ╔═╡ 747f4e33-44a9-48fb-8297-fe6f83a49518
 writejson(joinpath(@__DIR__, "LcXX2Lcpipi.json"), computation_result)
@@ -453,7 +451,6 @@ unsafe_uncombine_replacement = [
 # ╠═4390fe7b-8fb2-4793-9743-6717eacc1e9d
 # ╠═3e9c2854-2e4b-4bdf-8dba-046a277ab078
 # ╟─e344aac4-ab78-4052-bb73-6ab008e3cdb5
-# ╠═e0640daa-fa00-421c-99ec-be93347cb751
 # ╠═19cee35a-e13c-4d9f-a658-b2436b2bea89
 # ╠═b7103bf9-f46d-4ded-b44b-3c220064324f
 # ╠═ee898d12-e33c-49c4-a3bd-e5ba91be96b3
